@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuestro San Valentín</title>
+<style>
+    body { font-family: 'Arial', sans-serif; text-align: center; background-color: #fff0f3; color: #d63384; padding: 20px; }
+    
+   .audio-section { 
+        margin: 20px auto; 
+        border: 2px solid #ff4d6d; 
+        padding: 15px; 
+        border-radius: 25px; 
+        background: white; 
+        width: 90%; /* Ahora usa el 90% de la pantalla siempre */
+        max-width: 400px; /* Pero no se hace gigante en PC */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        box-sizing: border-box; /* Evita que el padding lo ensanche de más */
+    }
+    
+    audio { 
+        width: 100%; /* El reproductor se estira al tamaño del cuadro */
+        display: block; 
+        margin: 0 auto; 
+    }
+
+   /* CONTENEDOR DE FOTOS CON FLECHAS */
+    .slideshow-container { 
+        max-width: 300px; 
+        margin: auto; 
+        overflow: hidden; 
+        border-radius: 20px; 
+        border: 5px solid white; 
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+        height: 400px; 
+        position: relative; 
+        background-color: #1a1a1a; /* Fondo oscuro para que las fotos resalten */
+    }
+
+    .slideshow-container img { 
+        width: 100%; 
+        height: 100%; 
+        object-fit: contain; /* CAMBIO CLAVE: Muestra la foto completa sin cortes */
+        position: absolute; 
+        left: 0; 
+        top: 0; 
+        opacity: 0; 
+        transition: opacity 1s; 
+    }
+    
+    .slideshow-container img.active { opacity: 1; }
+
+    /* ESTILO DE LAS FLECHAS */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.3s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: rgba(0,0,0,0.3); /* Fondo semi-transparente para que se vean sobre la foto */
+        z-index: 10;
+        text-decoration: none;
+    }
+    .next { right: 0; border-radius: 3px 0 0 3px; }
+    .prev { left: 0; }
+    .prev:hover, .next:hover { background-color: rgba(255, 77, 109, 0.8); }
+
+    .section { margin: 30px auto; max-width: 500px; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    
+    .descubrir-btn { 
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 25px;
+        background-color: #ff4d6d;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 50px;
+        transition: 0.2s;
+        box-shadow: 0 4px 10px rgba(255, 77, 109, 0.3);
+    }
+    .descubrir-btn:hover { background-color: #d63384; transform: scale(1.05); }
+    
+    .frase-contador { font-size: 1.1rem; line-height: 1.6; color: #590d22; }
+    .resaltado { color: #ff4d6d; font-weight: bold; font-size: 1.2rem; }
+
+    .dedicatoria { font-style: italic; color: #590d22; line-height: 1.8; text-align: justify; font-size: 1.05rem; }
+    .firma { display: block; margin-top: 15px; font-weight: bold; font-style: normal; text-align: center; color: #d63384; }
+</style>
+</head>
+<body>
+<h2 style="margin-bottom: 2px; font-size: 1.5rem;">❤️ FELIZ DIA DE SAN VALENTIN ❤️</h2>
+<hr style="width: 80%; max-width: 400px; border: 0; border-top: 2px solid #ff4d6d; margin: 8px auto; opacity: 0.6;">
+<h2 style="margin-top: 2px; font-size: 1.3rem;">- Nuestra Historia -</h2>
+
+<div class="audio-section">
+    <p style="margin-top: 0; font-weight: bold;">Dale play a nuestra canción:</p>
+    <audio controls>
+        <source src="https://files.catbox.moe/od6i8c.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+    </audio>
+</div>
+
+<div class="slideshow-container">
+    <img src="https://i.postimg.cc/3rftK4qc/Rio.jpg" class="active">
+    <img src="https://i.postimg.cc/G3gXc8fN/Villca1.jpg">
+    <img src="https://i.postimg.cc/c1kFsgzV/Villca2.jpg">
+    <img src="https://i.postimg.cc/XN1sVGPP/Postrer_Valle3.jpg">
+    <img src="https://i.postimg.cc/mknjVJMW/Pajcha1.jpg">
+    <img src="https://i.postimg.cc/7PtKxGRm/Postrer_Valle.jpg">
+    <img src="https://i.postimg.cc/kGGwQq2H/Matrimonio145.jpg">
+    <img src="https://i.postimg.cc/WzzSGTdB/Matrimonio149.jpg">
+    <img src="https://i.postimg.cc/zvQ7p6Wm/Matrimonio153.jpg">
+    <img src="https://i.postimg.cc/mkkVYBPJ/Matri1.jpg">
+    <img src="https://i.postimg.cc/63YY4yp4/Cena.jpg">
+    <img src="https://i.postimg.cc/d3f6npd3/DSC00028.jpg">
+    <img src="https://i.postimg.cc/hjppQft2/Junte1.jpg">
+    <img src="https://i.postimg.cc/nz009Chk/Curitiba1.jpg">
+    <img src="https://i.postimg.cc/bJ33SswL/Curitiba2.jpg">
+    <img src="https://i.postimg.cc/66bM92Pj/Postrer_Valle2.jpg">
+    <img src="https://i.postimg.cc/gJNNLn28/Barueri1.jpg">
+    <img src="https://i.postimg.cc/Qt00KHdW/Amor1.jpg">
+    <img src="https://i.postimg.cc/wv00R7jy/Amor2.jpg">
+    <img src="https://i.postimg.cc/C1mmnzxj/Cine1.jpg">
+    <img src="https://i.postimg.cc/hjppQftV/Cine2.jpg">
+    <img src="https://i.postimg.cc/5yypBbX8/Junte2.jpg">
+    <img src="https://i.postimg.cc/CMrcFB24/Playa5.jpg">
+    <img src="https://i.postimg.cc/0j4nZFmz/Playa4.jpg">
+    <img src="https://i.postimg.cc/59KsxYrp/Playa4.jpg">
+    <img src="https://i.postimg.cc/WpY52Fy8/Playa5.jpg">
+    <img src="https://i.postimg.cc/br5gLWbY/Playa2.jpg">
+    <img src="https://i.postimg.cc/2ytGTMv5/Playa3.jpg">
+
+    <a class="prev" onclick="cambiarFoto(-1)">&#10094;</a>
+    <a class="next" onclick="cambiarFoto(1)">&#10095;</a>
+</div>
+
+<div class="section">
+    <p class="frase-contador">
+        Hoy es <span id="fecha-actual" class="resaltado">...</span>, y desde el 30 de agosto de 2008 llevamos <span id="contador-años" class="resaltado">...</span> juntos.
+    </p>
+</div>
+
+<div class="section">
+    <div class="dedicatoria">
+        Mi Niña, nuestra historia es mi lugar favorito en el mundo. Diecisiete años han pasado desde que tu voz me hizo soñar por primera vez. Quién diría que aquel 'buenos días' en Barrio Lindo sería el inicio de nuestra vida entera. 
+        <br><br>
+        Desde las llamadas anónimas hasta aquel pedazo de torta que derramé por los nervios de tenerte cerca, supe que eras la indicada. No ha sido un camino fácil; perdimos un ángel y el dolor nos puso a prueba, pero juntos luchamos por nuestro milagro, siempre de la mano, siempre juntos.
+        <br><br>
+        Gracias por ser mi eterna sonrisa y por demostrarme que el amor lo puede todo, dándonos la alegría de ver a nuestro hijo curado y de ver los primeros pasos de nuestra hija. Eres mi heroína, mi vida entera y me sigues enamorando como el primer día. Si volviera a nacer, te buscaría mil veces más hasta encontrarte.
+        <span class="firma">Feliz San Valentín, TE AMO ❤️</span>
+    </div>
+    <br>
+    <a href="video.html" class="descubrir-btn">Continua...</a>
+</div>
+
+<script>
+    const fotos = document.querySelectorAll('.slideshow-container img');
+    let index = 0;
+    let autoPlay = setInterval(pasoAutomatico, 3000);
+
+    function pasoAutomatico() {
+        cambiarFoto(1);
+    }
+
+    function cambiarFoto(n) {
+        // Quitar clase activa a la foto actual
+        fotos[index].classList.remove('active');
+        
+        // Calcular nuevo índice
+        index = (index + n + fotos.length) % fotos.length;
+        
+        // Mostrar la nueva foto
+        fotos[index].classList.add('active');
+
+        // Reiniciar el temporizador para que si el usuario hace clic, no cambie justo después
+        clearInterval(autoPlay);
+        autoPlay = setInterval(pasoAutomatico, 3000);
+    }
+
+    function actualizarTodo() {
+        const ahora = new Date();
+        const opciones = { day: 'numeric', month: 'long' };
+        document.getElementById('fecha-actual').innerText = ahora.toLocaleDateString('es-ES', opciones);
+
+        const inicio = { anio: 2008, mes: 7, dia: 30 };
+        const actual = { anio: ahora.getFullYear(), mes: ahora.getMonth(), dia: ahora.getDate() };
+
+        let anios = actual.anio - inicio.anio;
+        let meses = actual.mes - inicio.mes;
+        let dias = actual.dia - inicio.dia;
+
+        if (dias < 0) {
+            meses--;
+            const ultimoDiaMesPasado = new Date(ahora.getFullYear(), ahora.getMonth(), 0).getDate();
+            dias = actual.dia - (inicio.dia - ultimoDiaMesPasado);
+            if (actual.mes === 1 && actual.dia < 30) {
+                dias = actual.dia - 1; 
+            }
+        }
+
+        if (meses < 0) {
+            anios--;
+            meses += 12;
+        }
+
+        const textoTiempo = anios + " años, " + meses + " meses y " + (dias < 0 ? 0 : dias) + " días";
+        document.getElementById('contador-años').innerText = textoTiempo;
+    }
+
+    actualizarTodo();
+</script>
+</body>
+</html>
